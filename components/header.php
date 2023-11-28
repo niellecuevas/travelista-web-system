@@ -5,7 +5,7 @@
 </head>
 <body>
 <!-- Top Bar -->
-<section id="top-bar">   
+<section id="top-bar" style="background-image: url('images/foggy-birds.png');">   
         <div id="logo">
             <img src="images/logoround.png">
         </div>

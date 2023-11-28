@@ -1,5 +1,6 @@
-/*top-bar*/
 #top-bar {
+    background-repeat: repeat; 
+    background-size: 200px 200px;
     background-color: #0089a8;
     padding: 20px;
     position: absolute;

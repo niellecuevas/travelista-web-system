@@ -20,6 +20,8 @@
             <img src="images/tripsched.png">
         </div>
 
+        <button class="btncss">Book Now!</button>
+
         <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dapibus neque dui. In vulputate a diam eget accumsan. Aliquam nec nibh enim. Curabitur eget eros faucibus, pretium libero ac, ornare arcu. Vestibulum tristique felis eu auctor rutrum. Quisque dictum eros convallis odio ultrices pharetra. Duis metus dolor, scelerisque in felis eu, vestibulum tincidunt orci. Praesent non nisi nec est sollicitudin condimentum. Phasellus condimentum lacus eu pharetra vestibulum. Fusce mollis lacinia nisl aliquam faucibus. Maecenas nulla augue, fermentum eget turpis id, commodo tincidunt arcu. In ultrices ut sapien id malesuada. Maecenas tempus odio ac enim rhoncus feugiat.
 
