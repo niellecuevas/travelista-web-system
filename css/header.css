@@ -1,15 +1,8 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-}
-
 #top-bar {
     background-color: #00d6cb;
     padding: 20px;
     position: fixed;
     width: 100%;
-    z-index: 1000;
     display: flex;
     max-height: 30%;
 }
