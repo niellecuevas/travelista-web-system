@@ -26,7 +26,8 @@ body::-webkit-scrollbar {
     padding: 0;
 }
 
-@media (max-width: 500px){
+
+@media screen and (max-width: 500px){
     .body-container {
         margin:auto;
         margin-top: 30%;
@@ -34,6 +35,8 @@ body::-webkit-scrollbar {
     }
     
   }
+
+
 
   /*button*/
   .btncss {
