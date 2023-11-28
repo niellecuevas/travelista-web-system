@@ -8,7 +8,7 @@
 <body>
 <?php include '../websystem/components/header.php';?>
 <div class="bookingList-container">
-    <h1>Bookings</h1>
+    <h1 class="booking-title">BOOKINGS</h1>
     <!-- Sorting Dropbox -->
     <?php include './components/adminfilter.php'?>
         <table>

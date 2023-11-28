@@ -35,3 +35,27 @@
     font-size: 13.5px;
     color: aliceblue;
 }
+
+@media (max-width: 500px){
+
+    #logo {
+        top: 10px;
+        left: 15%;
+    }
+    #logo img {
+        max-width: 61%;
+        max-height: 61%;
+    }
+
+    #title {
+        margin-top: -6%;
+        font-size: 7vw;
+        left: 40%; 
+    }
+
+    #subtitle {
+        left: 40.5%; 
+        font-size: 13px;
+    }
+    
+}
