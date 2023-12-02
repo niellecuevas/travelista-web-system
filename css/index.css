@@ -47,17 +47,16 @@ body::-webkit-scrollbar {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    color: #fff;
-    background-color: #F0A800;
+    color: #000000;
+    background-color: #ffffff;
     transition: background-color 0.3s ease;
+    position: relative;
+    left: 50%;
+    top: 50px;
+    transform: translate(-50%);
 }
 
  .btncss:hover {
-    background-color: #FFC700; 
-}
-
-
-.btncss:focus {
-    outline: none;
-    box-shadow: 0 0 5px rgba(240, 168, 0, 0.8);
+    background-color: #F0A800; 
+    color: #ffeeee;
 }
