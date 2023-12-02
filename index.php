@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>User Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travelista</title>
+    <link rel="icon" href="images/logoupdated.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/userform.css">
     <!-- fonts -->
