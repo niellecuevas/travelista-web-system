@@ -1,5 +1,28 @@
+<?php 
+include('dbconnection.inc.php');
+if(isset($_POST['submit'])){
+    $firstname = $_POST['firstname'];
+    $lastname = $_POST['lastname'];
+    $pax = $_POST['pax'];
+    $contactnumber = $_POST['contactnumber'];
+    $dtarrivaldeparture = $_POST['dtarrivaldeparture'];
+    $pickupplace = $_POST['pickupplace'];
+    $pickuptime = $_POST['pickuptime'];
+    $dropoff = $_POST['dropoff'];
+    $paymentmethod = $_POST['paymentmethod'];
+
+    $query = mysqli_query($con, "Insert into tbl_customer (firstname, lastname, pax, contactnumber, dtarrivaldeparture, pickupplace, pickuptime, dropoff, paymentmethod) Values ('$firstname' , '$lastname', '$pax' , '$contactnumber', '$dtarrivaldeparture', '$pickupplace', '$pickuptime', '$dropoff' , '$paymentmethod');");
+    if($query){
+        echo "<script>alert('Reservation submitted successfully!')</script>";
+    }else{
+        echo "<script>alert('There is an error.')</script>";
+    }
+}
+
+?>
+
 <div class="userForm">
-<form>
+<form method="POST"> 
     <div class="column">
         <div>
             <label for="firstname">Name:</label>
@@ -16,22 +39,19 @@
         </div>
         <div>
             <label for="phone">Contact Number:</label>
-            <input type="tel" id="phone" name="phone" required>
+            <input type="tel" id="phone" name="contactnumber" required>
         </div>
         <div class="column">
         <div>
             <label for="arrivaldeparture">Date and Time of Arrival/Departure:</label>
-            <input type="date" id="datearrivaldepart" name="datearrivaldepart" required>
-        </div>
-        <div class="column">
-            <input type="time" id="timearrivaldepart" name="timearrivaldepart" style="display: inline-block; margin-top: 27px;" required>
+            <input type="datetime-local" id="datearrivaldepart" name="dtarrivaldeparture" required>
         </div>
         </div>
     </div>
     <div class="column">
         <div>
             <label for="pickup">Pick Up:</label>
-            <input type="text" id="pickup" name="pickup" required>
+            <input type="text" id="pickup" name="pickupplace" required>
         </div>
         <div>
         <label for="pickuptime">Pick Up Time:</label>
@@ -44,11 +64,11 @@
     </div>
         <div>
             <label for="paymentmethod">Payment Method:</label>
-                <select id="dropdown" name="paymentmethd">
+                <select id="dropdown" name="paymentmethod">
                     <option value="option1">Collect</option>
                     <option value="option2">Charge to Hotel</option>
                 </select>
         </div>
-        <button type="submit">Book</button>
+        <button type="submit" name="submit">Book</button>
     </form>
 </div>
