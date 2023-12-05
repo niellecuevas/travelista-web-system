@@ -11,7 +11,8 @@ if(isset($_POST['submit'])){
     $dropoff = $_POST['dropoff'];
     $paymentmethod = $_POST['paymentmethod'];
 
-    $query = mysqli_query($con, "Insert into tbl_customer (firstname, lastname, pax, contactnumber, dtarrivaldeparture, pickupplace, pickuptime, dropoff, paymentmethod) Values ('$firstname' , '$lastname', '$pax' , '$contactnumber', '$dtarrivaldeparture', '$pickupplace', '$pickuptime', '$dropoff' , '$paymentmethod');");
+    $query = ("Insert into customer_book (firstname, lastname, pax, contactnumber, dtarrivaldeparture, pickupplace, pickuptime, dropoff, paymentmethod) Values ('$firstname' , '$lastname', '$pax' , '$contactnumber', '$dtarrivaldeparture', '$pickupplace', '$pickuptime', '$dropoff' , '$paymentmethod');");
+    mysqli_query($con,$query);
     if($query){
         echo "<!--<script>alert('Reservation submitted successfully!')</script>";-->
     }else{
@@ -38,8 +39,8 @@ if(isset($_POST['submit'])){
             <input type="number" id="pax" name="pax" placeholder="How many passengers?" required>
         </div>
         <div>
-            <label for="phone">Contact Number:</label>
-            <input type="tel" id="phone" name="contactnumber" required>
+            <label for="contactnumber">Contact Number:</label>
+            <input type="text" id="contactnumber" name="contactnumber" required>
         </div>
         <div>
             <label for="arrivaldeparture">Date and Time of Arrival/Departure:</label>
@@ -67,6 +68,6 @@ if(isset($_POST['submit'])){
                     <option value="option2">Charge to Hotel</option>
                 </select>
         </div>
-        <button type="submit" name="submit">Book</button>
+        <input type="submit" name="submit" value="Book">
     </form>
 </div>
