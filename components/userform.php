@@ -1,4 +1,4 @@
-<?php 
+<//?php 
 include('dbconnection.inc.php');
 if(isset($_POST['submit'])){
     $firstname = $_POST['firstname'];
@@ -13,15 +13,15 @@ if(isset($_POST['submit'])){
 
     $query = mysqli_query($con, "Insert into tbl_customer (firstname, lastname, pax, contactnumber, dtarrivaldeparture, pickupplace, pickuptime, dropoff, paymentmethod) Values ('$firstname' , '$lastname', '$pax' , '$contactnumber', '$dtarrivaldeparture', '$pickupplace', '$pickuptime', '$dropoff' , '$paymentmethod');");
     if($query){
-        echo "<script>alert('Reservation submitted successfully!')</script>";
+        echo "<!--<script>alert('Reservation submitted successfully!')</script>";-->
     }else{
-        echo "<script>alert('There is an error.')</script>";
+        echo "<!--<script>alert('There is an error.')</script>";-->
     }
 }
 
 ?>
 
-<div class="userForm">
+<div id="customerForm" class="userForm">
 <form method="POST"> 
     <div class="column">
         <div>
@@ -35,17 +35,15 @@ if(isset($_POST['submit'])){
     <div class="column">
         <div>
             <label for="pax">Pax:</label>
-            <input type="number" id="pax" name="pax" required>
+            <input type="number" id="pax" name="pax" placeholder="How many passengers?" required>
         </div>
         <div>
             <label for="phone">Contact Number:</label>
             <input type="tel" id="phone" name="contactnumber" required>
         </div>
-        <div class="column">
         <div>
             <label for="arrivaldeparture">Date and Time of Arrival/Departure:</label>
             <input type="datetime-local" id="datearrivaldepart" name="dtarrivaldeparture" required>
-        </div>
         </div>
     </div>
     <div class="column">
@@ -54,8 +52,8 @@ if(isset($_POST['submit'])){
             <input type="text" id="pickup" name="pickupplace" required>
         </div>
         <div>
-        <label for="pickuptime">Pick Up Time:</label>
-        <input type="time" id="pickuptime" name="pickuptime" required>
+            <label for="pickuptime">Pick Up Time:</label>
+            <input type="time" id="pickuptime" name="pickuptime" required>
         </div>
         <div>
             <label for="dropoff">Drop Off:</label>

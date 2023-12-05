@@ -1,4 +1,5 @@
 .userForm {
+    display: none;
     font-family: 'Roboto Condensed', sans-serif;
     width: 80%;
     margin: 0;
@@ -11,48 +12,62 @@
 .userForm form {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 5%;
+}
+
+#customerForm.show {
+    display: block;
 }
 
 .userForm label {
-    display: flex;
+    display: inline-block;
     margin-bottom: 8px;
     color: #333;
 }
 
 .userForm input {
+    display: inline-block;
     max-height: 30px;
-    width: 100%;
+    width: calc(100% - 10px);
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #9a9999;
     border-radius: 4px;
-    box-sizing: border-box;
-    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .userForm select {
+    display: block;
     max-height: 35px;
-    width: 100%;
+    width: calc(100% - 10px);
     padding: 5px;
     border: 1px solid #9a9999;
     border-radius: 4px;
     box-sizing: border-box;
+    margin-bottom: 15px;
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .column {
     display: flex;
-    column-count: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     column-gap: 20px;
+}
+
+.column div {
+    width: 100%;
 }
 
 button {
     position: relative;
     top: 10px;
-    background-color: #0089a8;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #F0A800;
     color: #fff;
     padding: 12px 20px;
     border: none;
@@ -62,6 +77,6 @@ button {
 }
 
 button:hover {
-    background-color: #00687e;
+    background-color: #F06C00;
 }
 

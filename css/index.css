@@ -11,7 +11,7 @@ body::-webkit-scrollbar {
 .body-container {
     position: absolute;
     max-width: 70%;
-    width: 100%;
+    min-height: 80%;
     padding: 25px;
     margin:auto;
     margin-top: 20%;
