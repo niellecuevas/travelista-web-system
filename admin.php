@@ -17,10 +17,48 @@
     <?php include './components/adminfilter.php'?>
         <table>
             <tr class="tbl_bookingList">
-                <th>Name</th>
-                <th>Date</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Pax</th>
+                <th>DateTime of Arrival and Departure</th>
+                <th>Pick-up Place</th>
+                <th>Pick-up Time</th>
+                <th>Dropoff</th>
+                <th>Payment Method</th>
                 <th>Payment Status</th>
+                <th> </th>
             </tr>
+
+            <?php 
+                include('dbconnection.inc.php');
+                $sqlquery = "SELECT * FROM customer_book";
+                $result = mysqli_query($con, $sqlquery);
+                while($row = mysqli_fetch_array($result)){
+                    $firstname = $row['firstname'];
+                    $lastname = $row['lastname'];
+                    $pax = $row['pax'];
+                    $contactnumber = $row['contactnumber'];
+                    $dtarrivaldeparture = $row['dtarrivaldeparture'];
+                    $pickupplace = $row['pickupplace'];
+                    $pickuptime = $row['pickuptime'];
+                    $dropoff = $row['dropoff'];
+                    $paymentmethod = $row['paymentmethod'];
+
+                    echo "<tr>
+                    <td>$firstname</td>
+                    <td>$lastname</td>
+                    <td>$pax</td>
+                    <td>$contactnumber</td>
+                    <td>$dtarrivaldeparture</td>
+                    <td>$pickupplace</td>
+                    <td>$pickuptime</td>
+                    <td>$dropoff</td>
+                    <td>$paymentmethod</td>
+                    <td><button class='btncss update-button' id='openEditForm'>Update</button></td>
+                    </tr>";
+                }
+            
+            ?>
     </table>
 </div>
 </body>
