@@ -27,6 +27,8 @@
                 <th>Payment Method</th>
                 <th>Payment Status</th>
                 <th> </th>
+                <th> </th>
+                <th> </th>
             </tr>
 
             <?php 
@@ -55,6 +57,9 @@
                     <td>$dropoff</td>
                     <td>$paymentmethod</td>
                     <td><button class='btncss update-button' id='openEditForm'>Update</button></td>
+                    <td><button class='btncss edit-button' id='openEditForm'>Edit</button></td>
+                    <td><button class='btncss delete-button' id='openEditForm'>Delete</button></td>
+
                     </tr>";
                 }
             
