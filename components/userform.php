@@ -1,4 +1,8 @@
-<//?php 
+<head>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<?php 
 include('dbconnection.inc.php');
 if(isset($_POST['submit'])){
     $firstname = $_POST['firstname'];
@@ -10,16 +14,15 @@ if(isset($_POST['submit'])){
     $pickuptime = $_POST['pickuptime'];
     $dropoff = $_POST['dropoff'];
     $paymentmethod = $_POST['paymentmethod'];
-
+    
     $query = ("Insert into customer_book (firstname, lastname, pax, contactnumber, dtarrivaldeparture, pickupplace, pickuptime, dropoff, paymentmethod) Values ('$firstname' , '$lastname', '$pax' , '$contactnumber', '$dtarrivaldeparture', '$pickupplace', '$pickuptime', '$dropoff' , '$paymentmethod');");
     mysqli_query($con,$query);
     if($query){
-        echo "<!--<script>alert('Reservation submitted successfully!')</script>";-->
+        echo '<script type="text/javascript">sweetAlert("Success !","Reservation Submitted!","success")</script>';
     }else{
-        echo "<!--<script>alert('There is an error.')</script>";-->
+        echo '<script type="text/javascript">sweetAlert("Error !","Try again !","error")</script>';
     }
 }
-
 ?>
 
 <div id="customerForm" class="userForm">
@@ -64,8 +67,8 @@ if(isset($_POST['submit'])){
         <div>
             <label for="paymentmethod">Payment Method:</label>
                 <select id="dropdown" name="paymentmethod">
-                    <option value="option1">Collect</option>
-                    <option value="option2">Charge to Hotel</option>
+                    <option value="Collect"></option>
+                    <option value="Charge to Hotel"></option>
                 </select>
         </div>
         <input id="formbtn" type="submit" name="submit" value="Book">
