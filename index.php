@@ -6,6 +6,7 @@
     <link rel="icon" href="images/logoupdated.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/userform.css">
+    <link rel="stylesheet" href="css/footer.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +31,31 @@
         <button class="btncss" onclick="openForm()">Book Now!</button>
 
         <?php require '../websystem/components/userform.php';?>
-        
     </div>
+
+    <footer>
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                El Nido, Palawan
+            </div>
+            <div>
+                <i class="fas fa-envelope"></i>
+                travelistatransportservice@gmail.com
+            </div>
+            <div>
+                <i class="fas fa-phone"></i>
+                0931 963 5690
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=100088849017809" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/2c352db45c.js" crossorigin="anonymous"></script>
+
     <script>
     function openForm() {
         var popup = document.getElementById("customerForm");
