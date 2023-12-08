@@ -14,13 +14,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background-image: url('images/elnido.jpg');">
 <!-- Top Bar -->
 <?php include '../websystem/components/header.php';?>
 
-    <div class="body-container">
+    <div id="container" class="body-container">
         <div id="banner-img">
             <img src="images/tripsched.png">
+        </div>
+
+        <div id="headertext">
+            <h1>Want a private ride?</h1>
         </div>
 
         <button class="btncss" onclick="openForm()">Book Now!</button>
@@ -32,6 +36,9 @@
     function openForm() {
         var popup = document.getElementById("customerForm");
         popup.classList.toggle("show");
+
+        var mainDiv = document.getElementById("container");
+        mainDiv.classList.toggle("expanded");
     }
     </script>
 </body>

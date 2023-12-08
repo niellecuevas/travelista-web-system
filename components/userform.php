@@ -68,6 +68,6 @@ if(isset($_POST['submit'])){
                     <option value="option2">Charge to Hotel</option>
                 </select>
         </div>
-        <input type="submit" name="submit" value="Book">
+        <input id="formbtn" type="submit" name="submit" value="Book">
     </form>
 </div>

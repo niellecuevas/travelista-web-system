@@ -8,16 +8,21 @@ body::-webkit-scrollbar {
     display: none;
   }
 
-.body-container {
+  .body-container {
     position: absolute;
-    max-width: 70%;
-    min-height: 80%;
+    width: 70%; 
+    min-height: 500px;
     padding: 25px;
-    margin:auto;
+    margin: auto;
     margin-top: 20%;
     margin-left: 13%;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+}
+
+#container.expanded {
+    height: auto;
+    transition: height 0.5s ease;
 }
 
 #banner-img img {
@@ -26,6 +31,16 @@ body::-webkit-scrollbar {
     padding: 0;
 }
 
+#headertext {
+    top: 20px;
+    text-align: center;
+    position: relative;
+}
+
+#headertext h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+}
 
 @media screen and (max-width: 500px){
     .body-container {
@@ -46,7 +61,6 @@ body::-webkit-scrollbar {
     padding: 15px 30px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -55,7 +69,6 @@ body::-webkit-scrollbar {
     transition: background-color 0.3s ease;
     position: relative;
     left: 50%;
-    top: 50px;
     transform: translate(-50%);
 }
 
