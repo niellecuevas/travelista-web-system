@@ -67,8 +67,8 @@ if(isset($_POST['submit'])){
         <div>
             <label for="paymentmethod">Payment Method:</label>
                 <select id="dropdown" name="paymentmethod">
-                    <option value="Collect"></option>
-                    <option value="Charge to Hotel"></option>
+                    <option value="Collect">Collect</option>
+                    <option value="Charge to Hotel">Charge to Hotel</option>
                 </select>
         </div>
         <input id="formbtn" type="submit" name="submit" value="Book">

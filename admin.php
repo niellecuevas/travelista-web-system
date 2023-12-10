@@ -6,6 +6,11 @@
     <link rel="icon" href="images/logoupdated.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/admin.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <!-- Include SweetAlert CSS and JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Include jQuery for AJAX -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
 
@@ -17,6 +22,7 @@
     <?php include './components/adminfilter.php'?>
         <table>
             <tr class="tbl_bookingList">
+                <th>ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Pax</th>
@@ -30,39 +36,11 @@
                 <th> </th>
             </tr>
 
-            <?php 
-                include('dbconnection.inc.php');
-                $sqlquery = "SELECT * FROM customer_book";
-                $result = mysqli_query($con, $sqlquery);
-                while($row = mysqli_fetch_array($result)){
-                    $firstname = $row['firstname'];
-                    $lastname = $row['lastname'];
-                    $pax = $row['pax'];
-                    $contactnumber = $row['contactnumber'];
-                    $dtarrivaldeparture = $row['dtarrivaldeparture'];
-                    $pickupplace = $row['pickupplace'];
-                    $pickuptime = $row['pickuptime'];
-                    $dropoff = $row['dropoff'];
-                    $paymentmethod = $row['paymentmethod'];
-
-                    echo "<tr>
-                    <td>$firstname</td>
-                    <td>$lastname</td>
-                    <td>$pax</td>
-                    <td>$contactnumber</td>
-                    <td>$dtarrivaldeparture</td>
-                    <td>$pickupplace</td>
-                    <td>$pickuptime</td>
-                    <td>$dropoff</td>
-                    <td>$paymentmethod</td>
-                    <td><button class='btncss edit-button' id='openEditForm'>Edit</button></td>
-                    <td><button class='btncss delete-button' id='openEditForm'>Delete</button></td>
-
-                    </tr>";
-                }
-            
-            ?>
+            <?php include './fetchdata.php'?>
+            <script src="./js/delete.js"></script>
     </table>
 </div>
+
+
 </body>
 </html>
