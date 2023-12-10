@@ -26,6 +26,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Pax</th>
+                <th>Contact Number</th>
                 <th>DateTime of Arrival and Departure</th>
                 <th>Pick-up Place</th>
                 <th>Pick-up Time</th>
