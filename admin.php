@@ -5,6 +5,7 @@
     <title>Admin</title>
     <link rel="icon" href="images/logoupdated.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/updateform.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- Include SweetAlert CSS and JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
@@ -40,8 +41,15 @@
             <?php include './fetchdata.php'?>
             <script src="./js/delete.js"></script>
     </table>
+
+    <?php include '../websystem/components/updateform.php';?>
+
 </div>
-
-
+<script>
+             function openEditForm() {
+                var popup = document.getElementById("updateForm");
+                popup.classList.toggle("show");
+                }
+</script>
 </body>
 </html>

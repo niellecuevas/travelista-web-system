@@ -60,9 +60,11 @@
     function openForm() {
         var popup = document.getElementById("customerForm");
         popup.classList.toggle("show");
-
-        var mainDiv = document.getElementById("container");
-        mainDiv.classList.toggle("expanded");
+        
+        if (popup.classList.contains("show")) {
+        // Scroll the page down to the pop-up
+        popup.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     }
     </script>
 </body>

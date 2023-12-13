@@ -6,8 +6,6 @@
     top: 7px;
     left: 50%;
     transform: translate(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .userForm form {
@@ -17,9 +15,8 @@
     padding: 3%;
 }
 
-#customerForm.show {
+#updateForm.show {
     display: block;
-    opacity: 1;
 }
 
 .userForm label {
@@ -47,7 +44,6 @@
     border: 1px solid #9a9999;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-bottom: 15px;
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -87,5 +83,4 @@
 #formbtn:hover {
     background-color: #F06C00;
 }
-
 

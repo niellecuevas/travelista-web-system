@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 04, 2023 at 01:43 PM
+-- Generation Time: Dec 13, 2023 at 06:32 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -37,17 +37,18 @@ CREATE TABLE `customer_book` (
   `pickupplace` varchar(255) NOT NULL,
   `pickuptime` time NOT NULL,
   `dropoff` varchar(255) NOT NULL,
-  `paymentmethod` varchar(255) NOT NULL
+  `paymentmethod` varchar(255) NOT NULL,
+  `paymentstatus` varchar(255) NOT NULL DEFAULT 'Unpaid'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `customer_book`
 --
 
-INSERT INTO `customer_book` (`id`, `firstname`, `lastname`, `pax`, `contactnumber`, `dtarrivaldeparture`, `pickupplace`, `pickuptime`, `dropoff`, `paymentmethod`) VALUES
-(1, 'Raniella', 'Cuevas', 2, '09568914195', '2023-12-05 20:33:00', 'ff', '20:38:00', 'df', 'option1'),
-(2, 'Sofia', 'mae', 5, '09568914195', '2023-12-06 20:35:00', 'adsfadf', '20:39:00', 'dfadsfadf', 'option2'),
-(3, 'chubarnes', 'chcuhcu', 7, '09568914195', '2023-12-07 20:36:00', 'adsfadf', '12:36:00', 'dfadsfadf', 'option2');
+INSERT INTO `customer_book` (`id`, `firstname`, `lastname`, `pax`, `contactnumber`, `dtarrivaldeparture`, `pickupplace`, `pickuptime`, `dropoff`, `paymentmethod`, `paymentstatus`) VALUES
+(15, 'asdfadf', 'Cuevas', 7, '09568914195', '2023-12-20 18:24:00', 'adsfadf', '18:24:00', 'dfadsfadf', 'Collect', ''),
+(16, 'Raniella', 'Cuevas', 5, '09568914195', '2023-12-12 09:35:00', 'ff', '22:35:00', 'df', 'Collect', ''),
+(17, 'breadiella', 'Cuevas', 4, '09568914195', '2023-12-13 20:46:00', 'ffad', '20:50:00', 'dfadsfadf', 'Collect', 'Unpaid');
 
 --
 -- Indexes for dumped tables
@@ -67,7 +68,7 @@ ALTER TABLE `customer_book`
 -- AUTO_INCREMENT for table `customer_book`
 --
 ALTER TABLE `customer_book`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
