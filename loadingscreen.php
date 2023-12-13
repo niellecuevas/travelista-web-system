@@ -18,7 +18,7 @@
 }
 
 .running-car {
-    width: 100px; /* Adjust the size as needed */
+    width: 45%; /* Adjust the size as needed */
 }
 
 .loading-bar {
@@ -31,12 +31,12 @@
 </head>
 <body>
     <div class="loading-wrapper">
-        <img src="pepe-el.gif" alt="Running Car GIF" class="running-car">
+        <img src="./images/van.gif" alt="Running Car GIF" class="running-car">
         <div class="loading-bar" id="loading-bar"></div>
     </div>
     <script>document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
-        document.getElementById('loading-bar').style.width = '100%';
+        document.getElementById('loading-bar');
         setTimeout(function () {
             window.location.href = 'index.php';
         }, 500);
