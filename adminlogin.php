@@ -1,3 +1,4 @@
+<?php include('authenticateadmin.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
     <div class="login-container">
         <div class="login-form">
             <h2>Admin</h2>
-            <form action="#" method="post">
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
 
