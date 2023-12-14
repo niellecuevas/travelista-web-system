@@ -12,8 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- Include jQuery for AJAX -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    </head>
-<body style="background-image: url('images/elnido4.jpg');">
+</head>
+<body style="background-image: url('images/elnido4edited.png');">
 
 <?php include '../websystem/components/header.php';?>
 <div class="bookingList-container">

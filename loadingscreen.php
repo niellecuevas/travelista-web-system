@@ -10,7 +10,9 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background-repeat: repeat; 
+    background-size: 200px 200px;
+    background-color: #0089a8;
 }
 
 .loading-wrapper {
@@ -29,9 +31,9 @@
 }
 </style>
 </head>
-<body>
+<body style="background-image: url('images/foggy-birds.png');">
     <div class="loading-wrapper">
-        <img src="./images/van.gif" alt="Running Car GIF" class="running-car">
+        <img src="./images/vanmoving.gif" alt="Running Car GIF" class="running-car">
         <div class="loading-bar" id="loading-bar"></div>
     </div>
     <script>document.addEventListener('DOMContentLoaded', function () {
