@@ -12,38 +12,19 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!-- Include jQuery for AJAX -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    </head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Include separate JavaScript file -->
+    <script src="script.js" defer></script>
+</head>
 <body style="background-image: url('images/elnido4.jpg');">
 
 <?php include '../websystem/components/header.php';?>
+
 <div class="bookingList-container">
     <h1 class="booking-title">BOOKINGS</h1>
-    <!-- Sorting Dropbox -->
-    <a href="./edit.php">Edit</a>
-        <table>
-            <thead>
-            <tr class="tbl_bookingList">
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Pax</th>
-                <th>Contact Number</th>
-                <th>DateTime of Arrival and Departure</th>
-                <th>Pick-up Place</th>
-                <th>Pick-up Time</th>
-                <th>Dropoff</th>
-                <th>Payment Method</th>
-                <th>Payment Status</th>
-                <th> </th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php include './fetchdata.php'?>
-            </tbody>
-
-            <script src="./js/delete.js"></script>
-    </table>
-
+    <a href="./admin.php">Reservations</a>
+    <?php include './popupform.php'?>
+    <script src="./js/update.js"></script>
 </div>
 
 </body>

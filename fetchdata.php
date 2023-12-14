@@ -27,8 +27,7 @@
                     <td>$dropoff</td>
                     <td>$paymentmethod</td>
                     <td>$paymentstatus</td>
-                    <td><button class='btncss edit-button' id='openEditForm'>Edit</button></td>
                     <td><button class='deleteBtn' data-id='" . $row["id"] . "'>Delete</button></td>
                     </tr>";
                 }
-            ?>
+                ?>
