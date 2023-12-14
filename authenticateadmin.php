@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['admin_username'] = $username;
             
             // Redirect to admin.php
-            header("Location: admin.php");
+            header("Location: adminloading.php");
             exit(); // Make sure to exit after the header redirect to prevent further execution
         } else {
             // Passwords do not match, authentication failed

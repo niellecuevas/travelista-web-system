@@ -43,6 +43,17 @@
             </tbody>
 
             <script src="./js/delete.js"></script>
+            <script>var elements = document.getElementsByTagName('body');
+elements[0].style.opacity = 0;
+(function fadeOut() {
+
+        var opacity = parseFloat(elements[0].style.opacity);
+
+        if (opacity == 1) return;
+
+        elements[0].style.opacity = opacity + 0.1;
+        setTimeout(fadeOut, 50); //<<<<<<<< here you set the speed!
+    })();</script>
     </table>
 
 </div>

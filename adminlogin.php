@@ -6,6 +6,7 @@
     <link rel="icon" href="images/logoupdated.png" sizes="32x32" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/adminlogin.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,5 +34,7 @@
             <img id="loginimage" src="images/elnido2.jpg">
         </div>
     </div>
+     <!-- Include SweetAlert script -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
