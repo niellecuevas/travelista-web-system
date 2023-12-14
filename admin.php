@@ -18,10 +18,18 @@
 
 <?php include '../websystem/components/adminheader.php';?>
 <div class="bookingList-container">
-    <h1 class="booking-title">BOOKINGS</h1>
+    <h1 class="booking-title">Reservation Information</h1>
     <!-- Sorting Dropbox -->
     <a href="./edit.php" class="edit-link">Edit Payment Status</a>
         <input type="text" class="search-input" id="searchInput" oninput="searchData()" placeholder="Search...">
+        <!-- Dropdown for filtering by payment status -->
+        <select id="paymentStatusFilter" onchange="filterByPaymentStatus()" class="filter">
+            <option value="">Filter by Payment Status: All </option>
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+            <option value="Cancelled">Cancelled</option>
+            <!-- Add more options based on your payment status values -->
+        </select>
         <table id="dataTable">
             <thead>
             <tr class="tbl_bookingList">
@@ -45,6 +53,7 @@
 
             <script src="./js/delete.js"></script>
             <script src="./js/search.js"></script>
+            <script src="./js/filter.js"></script>
             <script>var elements = document.getElementsByTagName('body');
                     elements[0].style.opacity = 0;
                     (function fadeOut() {

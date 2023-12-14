@@ -26,17 +26,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit(); // Make sure to exit after the header redirect to prevent further execution
         } else {
             // Passwords do not match, authentication failed
-            echo "Invalid username or password";
+            echo "Invalid username or password<script>var elements = document.getElementsByTagName('body');
+            elements[0].style.opacity = 0;
+            (function fadeOut() {
+            
+                    var opacity = parseFloat(elements[0].style.opacity);
+            
+                    if (opacity == 1) return;
+            
+                    elements[0].style.opacity = opacity + 1;
+                    setTimeout(fadeOut, 15000); //<<<<<<<< here you set the speed!
+                })();</script> ";
         }
     } else {
         // Username not found
-        echo "Invalid username or password";
+        echo "Invalid username or password 
+        <script>var elements = document.getElementsByTagName('body');
+        elements[0].style.opacity = 0;
+        (function fadeOut() {
+        
+                var opacity = parseFloat(elements[0].style.opacity);
+        
+                if (opacity == 1) return;
+        
+                elements[0].style.opacity = opacity + 1.1;
+                setTimeout(fadeOut, 15000); //<<<<<<<< here you set the speed!
+            })();</script>
+        ";
+       
+        
     }
 
     $stmt->close();
 }
 ?>
 
-
-
-?>

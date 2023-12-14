@@ -14,18 +14,28 @@
     <!-- Include jQuery for AJAX -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Include separate JavaScript file -->
-    <script src="script.js" defer></script>
 </head>
-<body style="background-image: url('images/elnido4.jpg');">
+<body style="background-image: url('images/elnido4edited.png');">
 
-<?php include '../websystem/components/header.php';?>
+<?php include '../websystem/components/adminheader.php';?>
 
 <div class="bookingList-container">
-    <h1 class="booking-title">BOOKINGS</h1>
+    <h1 class="booking-title">Payment Statuses</h1>
     <a href="./admin.php" class="edit-link">Reservations</a>
+    <input type="text" class="search-input" id="searchInput" oninput="searchData()" placeholder="Search...">
+        <!-- Dropdown for filtering by payment status -->
+        <select id="paymentStatusFilter" onchange="filterByPaymentStatus()" class="filter">
+            <option value="">Filter by Payment Status: All </option>
+            <option value="Paid">Paid</option>
+            <option value="Pending">Pending</option>
+            <option value="Cancelled">Cancelled</option>
+            <!-- Add more options based on your payment status values -->
+        </select>
+        
     <?php include './popupform.php'?>
     <script src="./js/update.js"></script>
+    <script src="./js/search.js"></script>
+    <script src="./js/editfilter.js"></script>
 </div>
 
 </body>

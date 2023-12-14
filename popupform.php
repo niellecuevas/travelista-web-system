@@ -9,12 +9,10 @@
     <!-- Include SweetAlert library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="css/edit.css">
-    <!-- Include separate JavaScript file -->
-    <script src="script.js" defer></script>
 </head>
 <body>
 
-<table>
+<table id="dataTable">
     <thead>
     <tr>
         <th>ID</th>
