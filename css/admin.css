@@ -26,6 +26,8 @@ body::-webkit-scrollbar {
     letter-spacing: 2px;
   }
 
+
+
 /*dropdown*/
 .dropdown {
   position: absolute; 
@@ -69,13 +71,13 @@ table {
   }
 
   table tr:nth-child(odd) {
-    background-color: #F4BF96;
+    background-color: #eac7ac;
  }
  table tr:nth-child(even) {
     background-color: #FDEEDC;
  }
 
- 
+
 @media (max-width: 500px){
   .bookingList-container {
     margin:auto;
@@ -85,3 +87,4 @@ table {
   }
   
 }
+

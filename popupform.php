@@ -8,6 +8,7 @@
     <title>Customer Data</title>
     <!-- Include SweetAlert library -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="css/edit.css">
     <!-- Include separate JavaScript file -->
     <script src="script.js" defer></script>
 </head>
@@ -39,7 +40,7 @@
                 echo "<td>" . $row["firstname"] . "</td>";
                 echo "<td>" . $row["lastname"] . "</td>";
                 echo "<td>" . $row["paymentstatus"] . "</td>";
-                echo "<td><button class='edit-button' 
+                echo "<td><button class='edit-button btn' 
                             data-id='{$row['id']}'
                             data-firstName='{$row['firstname']}'
                             data-lastName='{$row['lastname']}'

@@ -1,3 +1,4 @@
+<head> <link rel="stylesheet" href="css/edit.css"></head>
 <?php 
                 include('dbconnection.inc.php');
                 $sqlquery = "SELECT * FROM customer_book";
@@ -27,7 +28,7 @@
                     <td>$dropoff</td>
                     <td>$paymentmethod</td>
                     <td>$paymentstatus</td>
-                    <td><button class='deleteBtn' data-id='" . $row["id"] . "'>Delete</button></td>
+                    <td><button class='deleteBtn btn' data-id='" . $row["id"] . "'>Delete</button></td>
                     </tr>";
                 }
                 ?>

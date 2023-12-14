@@ -6,6 +6,7 @@
     <link rel="icon" href="images/logoupdated.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/updateform.css">
+    <link rel="stylesheet" href="css/edit.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- Include SweetAlert CSS and JS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
@@ -22,7 +23,7 @@
 
 <div class="bookingList-container">
     <h1 class="booking-title">BOOKINGS</h1>
-    <a href="./admin.php">Reservations</a>
+    <a href="./admin.php" class="edit-link">Reservations</a>
     <?php include './popupform.php'?>
     <script src="./js/update.js"></script>
 </div>
