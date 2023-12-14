@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +18,7 @@
         <div id="subtitle">
             <h2>Tourist Transport Service || Ride Share/Van Hire</h2>
         </div>
+        <?php include ('logout.php');?>
     </section>
 </body>
 </html>
