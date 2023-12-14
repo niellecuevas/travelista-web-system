@@ -6,7 +6,7 @@
     border: 2px solid #0089a8;
     padding: 10px;
     border-radius: 15px 50px; float:right;
-    margin-top: -5%;
+    margin-bottom: 7px;
   }
 
   .edit-link:hover, a:active {
@@ -24,4 +24,19 @@
     cursor: pointer;
     background-color: #0089a8;
   }
-     
+  .btn:hover{
+    -webkit-filter: brightness(80%);
+  }
+  
+  .search-input {
+      width: 70%;
+      border: 3px solid #00B4CC;
+      padding: 5px;
+      height: 20px;
+      border-radius: 5px;
+      outline: none;
+      color: black;
+      font-size: 15px;
+      margin-bottom: 1px;
+    }
+  

@@ -16,12 +16,13 @@
 </head>
 <body style="background-image: url('images/elnido4edited.png');">
 
-<?php include '../websystem/components/header.php';?>
+<?php include '../websystem/components/adminheader.php';?>
 <div class="bookingList-container">
     <h1 class="booking-title">BOOKINGS</h1>
     <!-- Sorting Dropbox -->
-    <a href="./edit.php" class="edit-link">Edit</a>
-        <table>
+    <a href="./edit.php" class="edit-link">Edit Payment Status</a>
+        <input type="text" class="search-input" id="searchInput" oninput="searchData()" placeholder="Search...">
+        <table id="dataTable">
             <thead>
             <tr class="tbl_bookingList">
                 <th>ID</th>
@@ -43,17 +44,20 @@
             </tbody>
 
             <script src="./js/delete.js"></script>
+            <script src="./js/search.js"></script>
             <script>var elements = document.getElementsByTagName('body');
-elements[0].style.opacity = 0;
-(function fadeOut() {
+                    elements[0].style.opacity = 0;
+                    (function fadeOut() {
 
-        var opacity = parseFloat(elements[0].style.opacity);
+                            var opacity = parseFloat(elements[0].style.opacity);
 
-        if (opacity == 1) return;
+                            if (opacity == 1) return;
 
-        elements[0].style.opacity = opacity + 0.1;
-        setTimeout(fadeOut, 50); //<<<<<<<< here you set the speed!
-    })();</script>
+                            elements[0].style.opacity = opacity + 0.1;
+                            setTimeout(fadeOut, 50); //<<<<<<<< here you set the speed!
+                        })();
+            </script>
+
     </table>
 
 </div>
